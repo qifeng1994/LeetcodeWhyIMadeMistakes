@@ -1,3 +1,0 @@
-﻿  cppreference.cpp
-F:\C++\OOP\OOP\STL\cppreference.cpp(102,11): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  STL.vcxproj -> F:\C++\OOP\OOP\x64\Debug\STL.exe

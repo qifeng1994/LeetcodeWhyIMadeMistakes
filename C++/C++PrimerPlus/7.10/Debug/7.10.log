@@ -1,3 +1,0 @@
-﻿  7.10.cpp
-F:\C++\C++PrimerPlus\7.10\7.10.cpp(29): warning C4172: returning address of local variable or temporary: data1
-  7.10.vcxproj -> F:\C++\C++PrimerPlus\Debug\7.10.exe
