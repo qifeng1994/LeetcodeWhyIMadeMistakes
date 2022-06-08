@@ -15,16 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="基于对象的补充.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="委托相关.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="OOP.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="dubug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -144,6 +144,107 @@ namespace p9
 	}
 }
 
+//p10 static
+namespace p10
+{
+	class Account
+	{
+	public:
+		static double m_rate;
+		static void set_rate(const double& x) { m_rate = x; }
+	};
+
+	double Account::m_rate = 8.0; //静态数据必须定义，也可以不赋值具体的数字
+
+	void test_static()
+	{
+		Account::set_rate(5.0); 
+		cout << "通过class name调用static函数 m_rate = " << Account::m_rate << endl;
+		Account a;
+		a.set_rate(7.0); 
+		cout << "通过object调用static函数 m_rate = " << Account::m_rate << endl;
+	}
+}
+
+//P11类与类的三个关系：
+//composition表示has-a关系
+//设计模式 adapter 适配器模式
+
+//composition by reference表示两个类通过指针相连。指针指向类的实现。也叫做委托
+
+//inheritance表示is-a-kind-of关系
+
+//P12 虚函数
+//设计模式：template method 用子类调用父类的方法
+namespace p12_1
+{
+	class CDocument //application framework
+	{
+	public:
+		void OnFileOpen();
+		virtual void Serialize() { cout << "调用父类虚函数serialize()" << endl; } //这个地方按理说应该是空的虚函数，认为cdocument是一个抽象类
+	};
+
+	void CDocument::OnFileOpen()
+	{
+		cout << "调用父类函数onfileopen()" << endl;
+		Serialize();
+	}
+
+	class CMyDoc :public CDocument //application
+	{
+	public:
+		virtual void Serialize() { cout << "调用子类虚函数serialize()" << endl; }
+	};
+
+	void test_vir()
+	{
+		CMyDoc myDoc;
+		myDoc.OnFileOpen(); //最终调用的是子类虚函数
+	}
+}
+
+//设计模式 observer or Publish/subscribe 观察者模式:委托+继承
+namespace p12_2
+{
+
+}
+
+#include <vector>
+//P13
+//设计模式 composite：委托+继承
+namespace p13_1
+{
+	class Component
+	{
+	private:
+		int value;
+	public:
+		Component(int val) { value = val; }
+		virtual void add(Component*) {} //空的虚函数
+	};
+
+	class Primitive:public Component
+	{
+	public:
+		Primitive(int val) :Component(val) {}
+	};
+
+	class Composite :public Component
+	{
+	private:
+		vector<Component*> c; //composite类可以放component对象
+	public:
+		Composite(int val) :Component(val) {}
+		void add(Component* elem) { c.push_back(elem); } //实现了委托
+	};
+}
+
+//设计模式 prototype:委托+继承
+namespace p13_2
+{
+
+}
 //p15 conversion function 分数转换函数的例子
 namespace p15
 {
@@ -410,5 +511,9 @@ namespace p30
 
 //p36
 
-
+int main()
+{
+	
+	return 0;
+}
 
