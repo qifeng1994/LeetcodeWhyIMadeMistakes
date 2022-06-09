@@ -129,13 +129,29 @@ namespace algor
 		cout <<"find_first_of()返回在v1中首次出现v2中含有的元素的迭代器 首次出现的元素是 " << *result << endl;
 	}
 
+	void adjacent_find_()
+	{
+		vector<int> v1{ 0,1,2,3,40,40,41,41,5 };
+		auto i1 = adjacent_find(v1.begin(), v1.end()); //返回迭代器
+		cout << "adjacent_find()搜索范围中两个相继相等的元素, v1中首个相等的元素是 第" << distance(v1.begin(),i1)<<"个，元素是 " <<*i1<< endl;
 
+		//TODO
+		cout << "adjacent_find()还可以基于条件判断" << endl;
+	}
+
+	void search_()
+	{
+		string str = "why waste time learning, when ignorance is instantaneous?";
+		string substr = "learning";
+		auto result = search(str.begin(), str.end(), substr.begin(), substr.end());
+		cout << "search()搜索范围中首次出现某个子序列，str中首个相等的子序列是 第" << distance(str.begin(),result)<<"个，元素是 " << *result << endl;
+	}
 }
 
-//int main()
-//{
-//	
-//	return 0;
-//}
+int main()
+{
+	algor::search_();
+	return 0;
+}
 
 //c11新特性：lambda表达式
