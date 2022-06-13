@@ -5,6 +5,7 @@
 #include <ctime>
 #include <string>
 
+//在类中使用动态数组和构造函数参数来提供元素数目
 using namespace std;
 namespace stack_pointer
 {
@@ -81,13 +82,8 @@ namespace stack_pointer
 
 	void test_stack() //st栈中存放的都是指针，整个过程其实是把in数组中存放的指针，以st栈为中转搬运到out数组中
 	{
-
+		//程序清单14.16
 	}
 }
 
-
-int main()
-{
-    return 0;
-}
 

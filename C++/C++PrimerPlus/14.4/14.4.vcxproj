@@ -140,6 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="14.4.3.cpp" />
+    <ClCompile Include="14.4.4.cpp" />
+    <ClCompile Include="14.4.5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
