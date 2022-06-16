@@ -46,14 +46,19 @@ void test_list()
 	cout << endl;
 
 	//移除4后只剩6个元素
+	//std::list<T,Allocator>::remove
+	//void remove( const T& value )
 	la.remove(4);
 	cout << "after using remove() method: \n";
 	for_each(la.begin(), la.end(), outint);
 	cout << endl;
 
 	//还是10个元素，但是有无效的元素
+	//std::remove
+	//template< class ForwardIt, class T >
+	//ForwardIt remove(ForwardIt first, ForwardIt last, const T & value);
 	list<int>::iterator last;
-	last = remove(lb.begin(), lb.end(), 4); //这个remove()不是成员函数，因此不能调整链表的长度，它将没被删除的元素放在链表的开始位置，返回指向新的超尾值的迭代器
+	last = remove(lb.begin(), lb.end(), 4); //这个remove()不是成员函数，因此不能调整链表的长度，它将没被删除的元素放在链表的开始位置，返回指向新的超尾值的迭代器。这里如果写auto的话会简单点
 	cout << "after using remove() function: \n";
 	for_each(lb.begin(), lb.end(), outint);
 	cout << endl;
@@ -63,10 +68,4 @@ void test_list()
 	cout << "after using eraser() method: \n";
 	for_each(lb.begin(), lb.end(), outint);
 	cout << endl;
-}
-int main()
-{
-	// test_functor();
-	// test_list();
-	return 0;
 }
