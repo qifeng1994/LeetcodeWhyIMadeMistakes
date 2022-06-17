@@ -48,7 +48,7 @@ string get_a_target_string()
 	return string(buf);
 }
 
-int compareLongs(const void* a, const void* b) //比较两个数大小
+int compareLongs(const void* a, const void* b) //比较两个数大小，这里为什么是void* ??
 {
 	return (*(long*)a - *(long*)b);
 }
@@ -67,10 +67,10 @@ int compareStrings(const void* a, const void* b) //比较两个字符串的长度
 #include <array>
 #include <ctime>
 #include <cstdlib> //qsort,bsearch,NULL
-namespace p3_array
+namespace p3_array //array是内存连续的，长度固定的数据类型
 {
 	//p3 about container
-	//sequence containers 有序容器适合查找数据:array, vector, deque, list 双向链表, forward list单向链表 
+	//sequence containers :array, vector, deque, list 双向链表, forward list单向链表 
 	//associative containers: set/multiset 红黑树, map/multimap 红黑树 数据是键值对
 	//hash table separate chaining
 
@@ -110,7 +110,7 @@ namespace p3_array
 #include <iostream>
 #include <ctime>
 #include <algorithm> //sort()
-namespace p4_vector
+namespace p4_vector //vector是内存连续的，一端开口的数据类型
 {
 	void test_vector(long& value)
 	{
@@ -143,7 +143,7 @@ namespace p4_vector
 }
 
 #include <list>
-namespace p5_list
+namespace p5_list //list的内存不连续，双向链表
 {
 	void test_list(long& value)
 	{
@@ -172,6 +172,46 @@ namespace p5_list
 		//省略部分代码
 
 	}
+}
+
+#include<forward_list>
+
+namespace p5_forward_list //单向链表 
+{
+	//插入数据用push_front()方法
+}
+
+namespace p5_deque //双端队列，内存是分段连续buffer，数据两端开口
+{
+
+}
+
+//p6 关联式容器查找非常快 这种数据类型在插入之后都是自动排列好的么？？？
+
+namespace p6_multiset //接受重复的数据，数据表现为红黑树
+{
+	//插入数据用insert()方法
+}
+
+namespace p6_multimap //接受重复的数据，数据表现为红黑树
+{
+	//insert(pair<keytype,valuetype>(key,value))
+}
+
+namespace p6_unordered_multiset //数据表现为hash table
+{
+	//insert()
+	//bucket_count() bucket_size()是特有的方法
+}
+
+namespace p6_set //插入重复的数据视为无效
+{
+
+}
+
+namespace p6_map //如果插入两个相同key但是不同value的数据会怎么样???
+{
+	//赋值方式 mapname[key]=value
 }
 
 //P8标准库源码位置，gnu4.9.2\include\c++\bits\stl_xxx
