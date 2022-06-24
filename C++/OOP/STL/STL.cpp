@@ -214,6 +214,12 @@ namespace p6_map //如果插入两个相同key但是不同value的数据会怎么样???
 	//赋值方式 mapname[key]=value
 }
 
+
+//p7 allocator 分配器，用于分配内存，略过
+
+
+
+
 //P8标准库源码位置，gnu4.9.2\include\c++\bits\stl_xxx
 
 //P9容器的数据在使用方法的时候，是通过迭代器来实现算法
@@ -223,9 +229,3 @@ namespace p6_map //如果插入两个相同key但是不同value的数据会怎么样???
 //GCC4.9中使用回到了VC6的分配器，原来现在GCC都已经到22版本了
 
 //p13
-//p30 算法的例子
-//int main()
-//{
-//	
-//    return 0;
-//}
