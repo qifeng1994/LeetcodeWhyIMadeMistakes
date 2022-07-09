@@ -9,3 +9,5 @@
 ### This is a repository that records the wrong solution for Leetcode
 
 The filename is the number of the question.
+
+C++ folder includes program about base cpp, stl, oop, and cpp11.
