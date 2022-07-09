@@ -148,10 +148,10 @@ namespace algor
 	}
 }
 
-int main()
-{
-	algor::search_();
-	return 0;
-}
+//int main()
+//{
+//	algor::search_();
+//	return 0;
+//}
 
 //c11新特性：lambda表达式

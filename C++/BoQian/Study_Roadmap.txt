@@ -1,0 +1,9 @@
+Really thanks for Youtube Channel Bo Qian again.
+This roadmap is noted based on the channel overview video.
+As the video series updated, the difficulty of cpp knowledge gradually increases. As least for me, it is hard to follow the whole series quickily.
+So I take this note to remind myself the sequence of the study roadmap.
+
+1. Advanced C++ (from old to new C++ standard)(all are important, except the last three about memery management if you dont need)
+2. Modern C++ ( language features and library of 11 and 14)
+3. C++ Standard Library (introduce STL before C++11)(first round could skip #1#2 stream)
+4. Anything you like

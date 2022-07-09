@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{16e18c06-5df3-4d4b-9949-e2c59d2d23a8}</ProjectGuid>
-    <RootNamespace>STL</RootNamespace>
+    <ProjectGuid>{cb8e770e-0150-4272-a42e-0aa80aa109fc}</ProjectGuid>
+    <RootNamespace>AdvancedCpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,10 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="c11.cpp" />
-    <ClCompile Include="cppreference.cpp" />
-    <ClCompile Include="ModernCpp.cpp" />
-    <ClCompile Include="STL.cpp" />
+    <ClCompile Include="Advanced.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

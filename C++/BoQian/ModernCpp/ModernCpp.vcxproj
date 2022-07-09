@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{16e18c06-5df3-4d4b-9949-e2c59d2d23a8}</ProjectGuid>
-    <RootNamespace>STL</RootNamespace>
+    <ProjectGuid>{387f8adb-a02e-40bc-889c-234e7b01a382}</ProjectGuid>
+    <RootNamespace>ModernCpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,10 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="c11.cpp" />
-    <ClCompile Include="cppreference.cpp" />
-    <ClCompile Include="ModernCpp.cpp" />
-    <ClCompile Include="STL.cpp" />
+    <ClCompile Include="SharedPointer.cpp" />
+    <ClCompile Include="WeakPointer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

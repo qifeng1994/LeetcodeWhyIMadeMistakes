@@ -5,3 +5,9 @@
 
 //p6 
 
+
+
+namespace VariadicTemplates
+{
+
+}
